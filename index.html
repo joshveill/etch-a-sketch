@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Etch-a-Sketch</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1 id="title" class="text">Welcome to Etch-a-Sketch!</h1>
+    </header>
+
+    <div class="flex-container">
+      <div class="board"></div>
+    </div>
+
+    <div class="settings">
+      <div class="grid-size-container">
+        <label for="userInput">Choose Grid Size (1-99)</label>
+        <input
+          type="text"
+          value="16"
+          id="userInput"
+          onchange="makeGrid(this.value)"
+        />
+        <button class="btn-grid button">Set Grid</button>
+      </div>
+
+      <button class="btn button" onclick="colourChange('black')">Black</button>
+      <button class="btn button" onclick="colourChange('rainbow')">
+        Rainbow
+      </button>
+      <button class="btn button" onclick="colourChange('white')">Eraser</button>
+      <button class="btn button" onclick="makeGrid(16)">Reset</button>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
